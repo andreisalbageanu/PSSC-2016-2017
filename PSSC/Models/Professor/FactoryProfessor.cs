@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Repositories
+namespace Models.Professor
 {
-    public interface IRepositorySubject
+    public class FactoryProfessor
     {
     }
 }

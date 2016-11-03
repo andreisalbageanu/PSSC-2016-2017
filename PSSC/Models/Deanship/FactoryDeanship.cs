@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Repositories
+namespace Models.Deanship
 {
-    public interface IRepositorySubject
+    class FactoryDeanship
     {
     }
 }

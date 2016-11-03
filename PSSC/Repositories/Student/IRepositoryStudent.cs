@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Repositories
 {
-    interface IRepositoryStudent
+    public interface IRepositoryStudent
     {
     }
 }
