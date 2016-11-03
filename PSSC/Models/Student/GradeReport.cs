@@ -17,6 +17,7 @@ namespace Models.Student
         public GradeReport(ReadOnlyCollection<KeyValuePair<SubjectInformation, SubjectSituation>> gradeReport)
         {
             _gradeReport = gradeReport;
+
         }
 
         public SubjectSituation GetSubjectSituation(PlainText subjectName)
