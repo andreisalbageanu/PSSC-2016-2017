@@ -51,9 +51,13 @@
     <Compile Include="Professor\Professor.cs" />
     <Compile Include="Professor\Subjects.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Student\FactoryStudent.cs" />
     <Compile Include="Student\GradeReport.cs" />
     <Compile Include="Student\Student.cs" />
+    <Compile Include="Subject\Course.cs" />
     <Compile Include="Subject\EvaluationType.cs" />
+    <Compile Include="Subject\FactorySubject.cs" />
+    <Compile Include="Subject\Laboratory.cs" />
     <Compile Include="Subject\Subject.cs" />
     <Compile Include="Subject\SubjectInformation.cs" />
     <Compile Include="Subject\SubjectSituation.cs" />
