@@ -21,7 +21,7 @@ namespace Models.Subject
             _signedUpStudentsGrades = new Dictionary<Student.Student, SubjectSituation>();
         }
 
-        public Subject(Dictionary<Student.Student, SubjectSituation> signedUpStudentsGrades, SubjectInformation subjectInfo)
+        public Subject(Dictionary<Student.Student, SubjectSituation> signedUpStudentsGrades,SubjectInformation subjectInfo)
         {
             _signedUpStudentsGrades = signedUpStudentsGrades;
             SubjectInfo = subjectInfo;

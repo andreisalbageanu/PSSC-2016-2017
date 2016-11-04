@@ -8,5 +8,11 @@ namespace Models.Subject
 {
     public class Course
     {
+        public int _hours { get; internal set; }
+        
+        public Course(int hours)
+        {
+            _hours = hours;
+        }
     }
 }

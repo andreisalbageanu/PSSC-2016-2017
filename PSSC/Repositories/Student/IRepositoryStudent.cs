@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Repositories
+using Models;
+namespace Repositories.Student
 {
-    public interface IRepositoryStudent
+    interface IRepositoryStudent
     {
+        void ActualizeazaStudent(Models.Student.Student student);
+        void AdaugaStudent(Models.Student.Student student);
+        Models.Student.Student GasesteStudentDupaNume(string name);
     }
 }

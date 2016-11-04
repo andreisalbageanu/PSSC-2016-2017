@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace Models.Deanship
 {
-    class FactoryDeanship
+    public class FactoryDeanship
     {
+        public static readonly FactoryDeanship Instance = new FactoryDeanship();
+
+        private FactoryDeanship()
+        {
+
+        }
+
+       
     }
 }

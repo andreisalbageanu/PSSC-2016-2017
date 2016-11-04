@@ -39,11 +39,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Deanship\FactoryDeanship.cs" />
     <Compile Include="Deanship\IReportPublisher.cs" />
     <Compile Include="Deanship\StudyYear.cs" />
     <Compile Include="Generics\Attendence.cs" />
     <Compile Include="Generics\Credits.cs" />
+    <Compile Include="Generics\Exceptions\ArgumentCannotBeEmptyStringException.cs" />
+    <Compile Include="Generics\Exceptions\ArgumentInvalidLengthException.cs" />
     <Compile Include="Generics\Exceptions\InvalidCreditsValue.cs" />
+    <Compile Include="Generics\Exceptions\NoteInsuficienteException.cs" />
     <Compile Include="Generics\Grade.cs" />
     <Compile Include="Generics\PlainText.cs" />
     <Compile Include="Generics\Proportion.cs" />
