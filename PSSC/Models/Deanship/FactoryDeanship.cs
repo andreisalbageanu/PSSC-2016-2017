@@ -10,6 +10,7 @@ namespace Models.Deanship
 {
     public class FactoryDeanship
     {
+        
         public static readonly FactoryDeanship Instance = new FactoryDeanship();
 
         private FactoryDeanship()

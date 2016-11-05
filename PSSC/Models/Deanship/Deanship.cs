@@ -7,14 +7,14 @@ using Models.Generics;
 
 namespace Models.Deanship
 {
-    public class Deanship:IReportPublisher
+    public class Deanship : IReportStrategy
     {
         public Deanship()
         {
 
         }
 
-        PlainText GenerateReport(Subject.Subject sub,RegistrationNumber reg)
+       public PlainText GenerateReport(Subject.Subject sub,RegistrationNumber reg)
         {
             
             Subject.SubjectSituation situation;

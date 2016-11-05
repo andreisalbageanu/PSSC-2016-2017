@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 
 namespace Models.Deanship
 {
+    
     //Strategy Signature
     public interface IReportStrategy
     {
-        PlainText GenerateReport(List<Student.Student> students);
+        PlainText GenerateReport(Subject.Subject sub, RegistrationNumber reg);
     }
 
     //Strategy Context

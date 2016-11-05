@@ -8,6 +8,7 @@ namespace Repositories.Subject
 {
     public class DecanatRepository : IRepositorySubject
     {
+       
         private static List<Models.Subject.Subject> _subject = new List<Models.Subject.Subject>();
 
         public DecanatRepository()

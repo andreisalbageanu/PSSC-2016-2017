@@ -12,6 +12,7 @@ namespace Models.Deanship
     //Aggregate Root
     public class StudyYear
     {
+        
         private List<Subject.Subject> _definedSubjects;
         public ReadOnlyCollection<Subject.Subject> Subjects { get { return _definedSubjects.AsReadOnly(); } }
 
