@@ -7,8 +7,8 @@ namespace Models.Subject
         public PlainText Name { get; internal set; }
         public Credits Credits { get; internal set; }
         public Professor.Professor Professor { get; internal set; }
-        public Proportion ActivityProportion { get; internal set; }
         public EvaluationType Evaluation { get; internal set; }
+        public Laboratory Lab { get; internal set; }
 
         public SubjectInformation()
         {
@@ -20,7 +20,7 @@ namespace Models.Subject
             Name = name;
             Credits = credits;
             Evaluation = type;
-            ActivityProportion = activity;
+            Lab.ActivityProportion = activity;
         }
 
         public SubjectInformation(PlainText name, Credits credits, EvaluationType type, Proportion activity, Professor.Professor professor) 
@@ -36,7 +36,7 @@ namespace Models.Subject
 
         public void SetActivityProportion(Proportion proportion)
         {
-            ActivityProportion = proportion;
+            Lab.ActivityProportion = proportion;
         }
     }
 }

@@ -41,9 +41,9 @@ namespace Models.Subject
         {
             SubjectSituation situation = _signedUpStudentsGrades.First(d => d.Key.RegNumber == regNumber).Value;
 
-            decimal activityGrade = situation.ActivityGrade.Value;
+            decimal activityGrade = situation.Lab.ActivityGrade.Value;
             decimal examAverage = situation.GetExamAverage(SubjectInfo.Evaluation);
-            decimal proportion = SubjectInfo.ActivityProportion.Fraction;
+            decimal proportion = SubjectInfo.Lab.ActivityProportion.Fraction;
 
             return new Grade(activityGrade * proportion + (1 - proportion) * examAverage);
         }

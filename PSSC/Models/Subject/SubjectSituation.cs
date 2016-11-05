@@ -11,18 +11,18 @@ namespace Models.Subject
     {
         public Attendance Attendance { get; internal set; }
         public List<Grade> ExamGrades { get; internal set; }
-        public Grade ActivityGrade { get; internal set; }
+        public Laboratory Lab { get; internal set; }
 
         public SubjectSituation()
         {
 
         }
 
-        public SubjectSituation(Attendance attendance, List<Grade> examGrades, Grade activityGrade)
+        public SubjectSituation(Attendance attendance, List<Grade> examGrades, Laboratory lab)
         {
             Attendance = attendance;
             ExamGrades = examGrades;
-            ActivityGrade = activityGrade;
+            Lab = lab;
         }
 
         public void AddExamGrade(Grade examGrade)
@@ -32,7 +32,7 @@ namespace Models.Subject
 
         public void AddActivityGrade(Grade activityGrade)
         {
-            ActivityGrade = activityGrade;
+            Lab.ActivityGrade = activityGrade;
         }
 
         public void AddAttendance(Attendance attendance)

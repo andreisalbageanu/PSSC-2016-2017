@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Deanship\Deanship.cs" />
     <Compile Include="Deanship\FactoryDeanship.cs" />
     <Compile Include="Deanship\IReportPublisher.cs" />
     <Compile Include="Deanship\StudyYear.cs" />
@@ -52,11 +53,9 @@
     <Compile Include="Generics\PlainText.cs" />
     <Compile Include="Generics\Proportion.cs" />
     <Compile Include="Generics\RegistrationNumber.cs" />
-    <Compile Include="Professor\FactoryProfessor.cs" />
     <Compile Include="Professor\Professor.cs" />
     <Compile Include="Professor\Subjects.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Student\FactoryStudent.cs" />
     <Compile Include="Student\GradeReport.cs" />
     <Compile Include="Student\Student.cs" />
     <Compile Include="Subject\Course.cs" />
