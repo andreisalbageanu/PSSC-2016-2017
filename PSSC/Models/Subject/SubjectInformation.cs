@@ -9,6 +9,7 @@ namespace Models.Subject
         public Professor.Professor Professor { get; internal set; }
         public EvaluationType Evaluation { get; internal set; }
         public Laboratory Lab { get; internal set; }
+        public Course course { get; internal set; }
 
         public SubjectInformation()
         {
@@ -37,6 +38,10 @@ namespace Models.Subject
         public void SetActivityProportion(Proportion proportion)
         {
             Lab.ActivityProportion = proportion;
+        }
+        public void SetCourseHours(int hours)
+        {
+            course._hours = hours;
         }
     }
 }
