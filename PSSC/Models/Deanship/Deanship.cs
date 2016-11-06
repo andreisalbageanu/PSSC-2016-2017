@@ -7,6 +7,7 @@ using Models.Generics;
 
 namespace Models.Deanship
 {
+    //Decanatul stabileste disciplinele si inregistreaza profesorii si studentii
     public class Deanship : IReportStrategy
     {
         public Deanship()

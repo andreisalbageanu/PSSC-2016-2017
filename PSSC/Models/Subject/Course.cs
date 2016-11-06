@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Models.Subject
 {
+    //Curs apartinand disciplinelor avand un anumit nr de ore
     public class Course
     {
         public int _hours { get; internal set; }

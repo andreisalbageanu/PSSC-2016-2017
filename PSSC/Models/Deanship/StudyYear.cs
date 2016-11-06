@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Models.Deanship
 {
-    //Aggregate Root
+    //Aggregate Root inregistrare discipline 
     public class StudyYear
     {
         

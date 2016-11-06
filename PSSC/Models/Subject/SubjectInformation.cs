@@ -2,6 +2,7 @@
 
 namespace Models.Subject
 {
+    //informatii despre disciplina
     public class SubjectInformation
     {
         public PlainText Name { get; internal set; }

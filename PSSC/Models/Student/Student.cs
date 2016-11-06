@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Models.Student
 {
-    //Entity
+    //Entity Student 
     public class Student
     {
         public RegistrationNumber RegNumber { get; internal set; }

@@ -6,6 +6,7 @@ using Models.Subject;
 
 namespace Repositories.Subject
 {
+    //root de agregare
     public class DecanatRepository : IRepositorySubject
     {
        

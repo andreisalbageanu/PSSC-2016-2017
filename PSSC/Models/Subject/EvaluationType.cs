@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Models.Subject
 {
+    //tipul de exam al disciplinei
     public enum EvaluationType
     {
         Distributed,

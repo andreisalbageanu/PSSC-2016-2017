@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Models.Subject
 {
+    //situatia la disciplina
     public class SubjectSituation
     {
         public Attendance Attendance { get; internal set; }

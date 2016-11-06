@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Models.Generics
 {
+    //nr matricol pentru student
     public class RegistrationNumber
     {
         private string _number;

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Models.Generics
 {
+    //prezenta la disciplina
     public class Attendance
     {
         private int _count;

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Models.Subject
 {
-    //Entity
+    //Entity Subject
     public class Subject
     {
         public SubjectInformation SubjectInfo { get; internal set; }

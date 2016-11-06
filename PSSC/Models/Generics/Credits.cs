@@ -1,5 +1,6 @@
 ﻿namespace Models.Generics
 {
+    //credite la disciplina
     public class Credits
     {
         private const int _maxCredits = 60;

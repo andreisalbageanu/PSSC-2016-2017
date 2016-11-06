@@ -7,6 +7,7 @@ using Models.Generics;
 
 namespace Models.Subject
 {
+    //Laborator pentru disciplina
     public class Laboratory
     {
         public Grade ActivityGrade { get; internal set; }
