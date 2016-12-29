@@ -7,12 +7,12 @@ using Models.Subject;
 namespace Repositories.Subject
 {
     //root de agregare
-    public class DecanatRepository : IRepositorySubject
+    public class RepositorySubject : IRepositorySubject
     {
        
         private static List<Models.Subject.Subject> _subject = new List<Models.Subject.Subject>();
 
-        public DecanatRepository()
+        public RepositorySubject()
         {
         }
         public void AdaugaSubject(Models.Subject.Subject subject)
