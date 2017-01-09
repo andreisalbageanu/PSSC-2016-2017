@@ -29,7 +29,7 @@ namespace Models.Deanship
 
             return student;
         }
-        public Models.Professor.Professor CreateProfessor(string nume)
+        public Models.Professor.Professor CreateProfessor(string nume, string cnp)
         {
             Contract.Requires<ArgumentNullException>(nume != null, "text");
             Contract.Requires<ArgumentInvalidLengthException>(
@@ -37,7 +37,7 @@ namespace Models.Deanship
                     "Numele Profesorului trebuie sa contina intre 2 si 20 de caractere.");
 
             var profesor = new Models.Professor.Professor(
-                                        new PlainText(nume));
+                                        new PlainText(nume), new PlainText(cnp));
 
             return profesor;
         }

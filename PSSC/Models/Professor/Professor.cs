@@ -12,9 +12,11 @@ namespace Models.Professor
     {
         public PlainText Name { get; internal set; }
 
-        public Professor(PlainText name)
+        public PlainText CNP { get; internal set; }
+        public Professor(PlainText name,PlainText cnp)
         {
             Name = name;
+            CNP = cnp;
         }
     }
 }

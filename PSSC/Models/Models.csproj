@@ -39,6 +39,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="databaseDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>databaseDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Deanship\Deanship.cs" />
     <Compile Include="Deanship\FactoryDeanship.cs" />
     <Compile Include="Deanship\IReportPublisher.cs" />
@@ -56,6 +61,11 @@
     <Compile Include="Professor\Professor.cs" />
     <Compile Include="Professor\Subjects.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Student\GradeReport.cs" />
     <Compile Include="Student\Student.cs" />
     <Compile Include="Subject\Course.cs" />
@@ -66,7 +76,24 @@
     <Compile Include="Subject\SubjectInformation.cs" />
     <Compile Include="Subject\SubjectSituation.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="databaseDataSet1.xsc">
+      <DependentUpon>databaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="databaseDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>databaseDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="databaseDataSet1.xss">
+      <DependentUpon>databaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

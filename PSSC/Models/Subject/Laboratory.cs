@@ -10,8 +10,9 @@ namespace Models.Subject
     //Laborator pentru disciplina
     public class Laboratory
     {
-        public Grade ActivityGrade { get; internal set; }
+        
         public Proportion ActivityProportion { get; internal set; }
+        public Grade ActivityGrade { get; internal set; }
         public Laboratory(Grade activityGrade,Proportion activityProportion )
         {
             ActivityGrade = activityGrade;
