@@ -13,10 +13,10 @@ namespace Web.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class databaseEntities5 : DbContext
+    public partial class databaseEntities8 : DbContext
     {
-        public databaseEntities5()
-            : base("name=databaseEntities5")
+        public databaseEntities8()
+            : base("name=databaseEntities8")
         {
         }
     
@@ -27,7 +27,7 @@ namespace Web.Models
     
         public virtual DbSet<Professor> Professor { get; set; }
         public virtual DbSet<Situation> Situation { get; set; }
-        public virtual DbSet<Students> Students { get; set; }
+        public virtual DbSet<Student> Student { get; set; }
         public virtual DbSet<Subject> Subject { get; set; }
     }
 }

@@ -9,7 +9,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="CNP" Type="varchar" MaxLength="20" />
           <Property Name="Name" Type="varchar" MaxLength="10" />
         </EntityType>
@@ -17,7 +17,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="StudentName" Type="nchar" MaxLength="10" />
           <Property Name="SubjectName" Type="nchar" MaxLength="10" />
           <Property Name="ExamGrade" Type="int" />
@@ -25,11 +25,12 @@
           <Property Name="Professor" Type="nchar" MaxLength="10" />
           <Property Name="ExamAverage" Type="int" />
         </EntityType>
-        <EntityType Name="Students">
+        <EntityType Name="Student">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RegNo" Type="int" />
           <Property Name="Name" Type="varchar" MaxLength="10" />
           <Property Name="Credits" Type="int" />
         </EntityType>
@@ -37,18 +38,18 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="varchar" MaxLength="10" />
           <Property Name="Credits" Type="int" />
           <Property Name="Professor" Type="varchar" MaxLength="10" />
           <Property Name="EvaluationType" Type="varchar" MaxLength="20" />
-          <Property Name="LaboratoryProportion" Type="float" />
+          <Property Name="LaboratoryProportion" Type="varchar" MaxLength="10" />
           <Property Name="CourseHours" Type="int" />
         </EntityType>
         <EntityContainer Name="databaseModelStoreContainer">
           <EntitySet Name="Professor" EntityType="Self.Professor" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Situation" EntityType="Self.Situation" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Students" EntityType="Self.Students" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Subject" EntityType="Self.Subject" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
@@ -60,7 +61,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CNP" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="Name" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
         </EntityType>
@@ -68,7 +69,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="StudentName" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="SubjectName" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="ExamGrade" Type="Int32" />
@@ -76,11 +77,12 @@
           <Property Name="Professor" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="ExamAverage" Type="Int32" />
         </EntityType>
-        <EntityType Name="Students">
+        <EntityType Name="Student">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RegNo" Type="Int32" />
           <Property Name="Name" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="Credits" Type="Int32" />
         </EntityType>
@@ -88,18 +90,18 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="Credits" Type="Int32" />
           <Property Name="Professor" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="EvaluationType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="LaboratoryProportion" Type="Double" />
+          <Property Name="LaboratoryProportion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="CourseHours" Type="Int32" />
         </EntityType>
-        <EntityContainer Name="databaseEntities5" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="databaseEntities8" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Professor" EntityType="Self.Professor" />
           <EntitySet Name="Situation" EntityType="Self.Situation" />
-          <EntitySet Name="Students" EntityType="Self.Students" />
+          <EntitySet Name="Student" EntityType="Self.Student" />
           <EntitySet Name="Subject" EntityType="Self.Subject" />
         </EntityContainer>
       </Schema>
@@ -107,7 +109,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="databaseModelStoreContainer" CdmEntityContainer="databaseEntities5">
+        <EntityContainerMapping StorageEntityContainer="databaseModelStoreContainer" CdmEntityContainer="databaseEntities8">
           <EntitySetMapping Name="Professor">
             <EntityTypeMapping TypeName="databaseModel.Professor">
               <MappingFragment StoreEntitySet="Professor">
@@ -130,10 +132,11 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Students">
-            <EntityTypeMapping TypeName="databaseModel.Students">
-              <MappingFragment StoreEntitySet="Students">
+          <EntitySetMapping Name="Student">
+            <EntityTypeMapping TypeName="databaseModel.Student">
+              <MappingFragment StoreEntitySet="Student">
                 <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RegNo" ColumnName="RegNo" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Credits" ColumnName="Credits" />
               </MappingFragment>

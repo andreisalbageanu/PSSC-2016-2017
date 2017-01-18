@@ -12,9 +12,10 @@ namespace Web.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Students
+    public partial class Student
     {
         public int Id { get; set; }
+        public Nullable<int> RegNo { get; set; }
         public string Name { get; set; }
         public Nullable<int> Credits { get; set; }
     }

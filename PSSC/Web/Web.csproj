@@ -188,6 +188,9 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SituationController.cs" />
+    <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="Controllers\SubjectController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -214,7 +217,7 @@
     <Compile Include="Models\Situation.cs">
       <DependentUpon>database.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Students.cs">
+    <Compile Include="Models\Student.cs">
       <DependentUpon>database.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Subject.cs">
@@ -311,7 +314,22 @@
     <Content Include="Scripts\knockout-2.2.0.debug.js" />
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Views\Home\CreateProfesor.aspx" />
+    <Content Include="Views\Home\DeleteProfessor.aspx" />
+    <Content Include="Views\Home\EditProfessor.aspx" />
     <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Situation\CreateSituation.aspx" />
+    <Content Include="Views\Situation\DeleteSituation.aspx" />
+    <Content Include="Views\Situation\EditSituation.aspx" />
+    <Content Include="Views\Situation\Situatie.aspx" />
+    <Content Include="Views\Student\CreateStudent.aspx" />
+    <Content Include="Views\Student\DeleteStudent.aspx" />
+    <Content Include="Views\Student\EditStudent.aspx" />
+    <Content Include="Views\Student\Studenti.aspx" />
+    <Content Include="Views\Subject\CreateSubject.aspx" />
+    <Content Include="Views\Subject\DeleteSubject.aspx" />
+    <Content Include="Views\Subject\EditSubject.aspx" />
+    <Content Include="Views\Subject\Subjects.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -343,8 +361,6 @@
     <Content Include="Views\Account\Register.aspx" />
     <Content Include="Views\Account\ExternalLoginFailure.aspx" />
     <Content Include="Views\Account\ExternalLoginConfirmation.aspx" />
-    <Content Include="Views\Home\About.aspx" />
-    <Content Include="Views\Home\Contact.aspx" />
     <Content Include="Views\Shared\Error.aspx" />
     <Content Include="Views\Shared\_LoginPartial.aspx" />
     <Content Include="Views\Shared\Site.Master" />

@@ -19,7 +19,7 @@ namespace Web.Models
         public Nullable<int> Credits { get; set; }
         public string Professor { get; set; }
         public string EvaluationType { get; set; }
-        public Nullable<double> LaboratoryProportion { get; set; }
+        public string LaboratoryProportion { get; set; }
         public Nullable<int> CourseHours { get; set; }
     }
 }

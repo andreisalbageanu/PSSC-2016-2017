@@ -11,42 +11,46 @@ using System.Net;
 
 namespace Web.Controllers
 {
-    public class HomeController : Controller
+    public class StudentController : Controller
     {
-
 
 
         private Models.databaseEntities8 _db = new Models.databaseEntities8();
 
-        //Professors Table
-
-        public ActionResult Index()
+        public ActionResult Studenti(string searchString)
         {
 
-            return View(_db.Professor.ToList());
+            return View(_db.Student.ToList());
+            
 
         }
-
         //Create
-        public ActionResult CreateProfesor()
+        public ActionResult CreateStudent()
         {
+
             return View();
+
         }
+
         [HttpPost]
-        public ActionResult CreateProfesor(Models.Professor model)
+        public ActionResult CreateStudent(Models.Student model)
         {
+
             if (ModelState.IsValid)
             {
-                _db.Professor.Add(model);
+
+                _db.Student.Add(model);
+
                 _db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Studenti");
             }
             return View(model);
+
         }
         //Edit
-        public ActionResult EditProfessor(int id)
+        public ActionResult EditStudent(int id)
         {
-            Models.Professor model = _db.Professor.Find(id);
+            Models.Student model = _db.Student.Find(id);
             if (model == null)
             {
                 return HttpNotFound();
@@ -54,26 +58,24 @@ namespace Web.Controllers
             return View(model);
         }
         [HttpPost]
-        public ActionResult EditProfessor(Models.Professor model)
+        public ActionResult EditStudent(Models.Student model)
         {
             if (ModelState.IsValid)
             {
                 _db.Entry(model).State = EntityState.Modified;
                 _db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Studenti");
             }
             return View(model);
         }
-
-        //Delete
-
-        public ActionResult DeleteProfessor(int? id)
+        //Delete 
+        public ActionResult DeleteStudent(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Models.Professor model = _db.Professor.Find(id);
+            Models.Student model = _db.Student.Find(id);
             if (model == null)
             {
                 return HttpNotFound();
@@ -84,21 +86,16 @@ namespace Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteProfessor(int id)
+        public ActionResult DeleteStudent(int id)
         {
-            Models.Professor model = _db.Professor.Find(id);
-            _db.Professor.Remove(model);
+            Models.Student model = _db.Student.Find(id);
+            _db.Student.Remove(model);
             _db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Studenti");
         }
-
-
-
-
-        //Situation Table
-       
+        
 
         
-    }
 
+    }
 }

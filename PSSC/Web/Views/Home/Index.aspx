@@ -9,35 +9,30 @@
     <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server"> 
         
 
-        <h2>Index</h2> 
+        <h2>Professori</h2> 
 
-        <table  >
 
-            <tr>
 
-                
+        <p>
+    <%: Html.ActionLink("Create New", "CreateProfesor") %>
+     
+</p>
 
-                <th>
+       
+<table>
+    <tr>
+        <th>
+            <%: Html.DisplayNameFor(model => model.Name) %>
+        </th>
+        <th>
+            <%: Html.DisplayNameFor(model => model.CNP) %>
+        </th>
+        
+        <th></th>
+    </tr>
+   
+        
 
-                    Id
-
-                </th>
-
-                <th>
-
-                    CNP
-
-                </th>
-
-                <th>
-
-                    Name
-
-                </th>
-
-                
-
-            </tr> 
 
         <% foreach (var item in Model) { %>
 
@@ -47,11 +42,7 @@
 
                
 
-                <td>
-
-                    <%= Html.Encode(item.Id) %>
-
-                </td>
+               
 
                 <td>
 
@@ -64,7 +55,11 @@
                     <%= Html.Encode(item.Name) %>
 
                 </td>
-
+                <td>
+            <%: Html.ActionLink("Edit", "EditProfessor", new { id=item.Id }) %> |
+          
+            <%: Html.ActionLink("Delete", "DeleteProfessor", new { id=item.Id }) %>
+        </td>
                 
 
             </tr>
