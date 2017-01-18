@@ -13,6 +13,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servicii", "Services\Servic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{440E6A9D-3A19-4E19-8354-5C7E21085EEF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataBase", "DataBase", "{5973DAF2-DB73-4B68-B77B-6914E485E844}"
+	ProjectSection(SolutionItems) = preProject
+		DataBase\database1.mdf = DataBase\database1.mdf
+		DataBase\database1_log.LDF = DataBase\database1_log.LDF
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
